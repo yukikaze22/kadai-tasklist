@@ -15,10 +15,10 @@ class TasksController < ApplicationController
     @task = Task.new(task_params)
     
     if @task.save
-      flash[:sccess] ="Taskが正常に投稿されました"
+      flash[:success] ="Taskが正常に投稿されました"
       redirect_to @task
     else
-      flash.now[:dager] = "Taskが投稿されませんでした"
+      flash.now[:danger] = "Taskが投稿されませんでした"
       render :new
     end
   end
